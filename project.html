@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beading</title>
+    <style>
+        body{
+            background-color: #c8a2c8;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            padding: 10px;  
+            transition: scale 200ms ease-in-out;         
+        }
+        img:hover{
+            scale: 0.9;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            background-color: #c8a2c8;
+            color: white;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: all 200ms ease;
+        }
+        button:hover{
+            background-color:#736AAD;
+            cursor: pointer;
+        }
+        footer{
+            text-align: center;
+            margin:10px 0;
+            font-size: 16px ;
+        }
+        a{
+            text-decoration: none;
+        }
+        .theme{
+            font-size: 12px;
+            background-color: #736AAD;
+            border: none;
+            border-radius: 5px;
+        }
+        .theme:hover{
+            background-color: white;
+            color: black;
+        }
+        .intro-img{
+            transition: all 200ms ease-in-out;
+        }
+        .intro-img:hover{
+           filter: contrast(80%);
+           transform: scale(0.9);
+        }
+        .container{
+            margin: 10px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgb(255,255,255,0.7);
+            border-radius: 10px;
+        }
+        .grid{
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns:1fr 1fr ;
+            grid-gap: 10px;
+        }
+        .grid img{
+            width: 100%;
+            border-radius: 20px;
+        }
+        .dark{
+            background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+            color: white;
+        }
+        .dark .container{
+            background-color: rgb(128,128,128,0.7);
+        }
+    </style>
+</head>
+<body>
+    <button class="theme">Dark Mode</button>
+    <div class="container">
+        <h1>Beadwork</h1>  
+        <h2>My go-to hobby</h2>
+        <div class="grid">
+            <a href="https://en.wikipedia.org/wiki/Beadwork" 
+            target="_blank">
+            <img src="https://images.unsplash.com/photo-1703034390461-0b978d9bd21d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="intro-img">
+            </a>
+            <img src="https://images.unsplash.com/photo-1528797664208-e5a8c0b98881?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <img src="https://images.unsplash.com/photo-1519431458145-1ca3d5ccd68e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmVhZGVkJTIwYnJhY2VsZXR8ZW58MHx8MHx8fDA%3D">
+            <img src="https://images.unsplash.com/photo-1519451813217-4d3bfc1f1ad5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGJlYWRzJTIwYnJhY2VsZXR8ZW58MHx8MHx8fDI%3D">
+        </div>
+        <p>Beadwork is the art or craft of attaching beads to one another by stringing them onto a thread or thin wire with a sewing or beading needle or sewing them to cloth.
+        Beads are produced in a diverse range of materials, shapes, and sizes, and vary by the kind of art produced. Most often, beadwork is a form of personal adornment 
+        (e.g. jewelry), but it also commonly makes up other artworks.</p>
+        <p> I enjoy beading as it enables me to embrace the creativity within me, it also helps me slow down and focus. You should try it too!</p>
+        <a href="https://en.wikipedia.org/wiki/Beadwork">Curious? Find out more!🌐</a>
+        <button class="join-us">Start Beading</button>
+    </div>
+        <footer>
+            Coded by Dorna🌸
+        </footer>
+        <script>
+            function changeTheme(){
+                let body = document.querySelector("body");
+
+                if(body.classList.contains("dark")){
+                    body.classList.remove("dark");
+                }else{
+                    body.classList.add("dark");
+                }
+            }
+            let changeButton = document.querySelector(".theme");
+            changeButton.addEventListener("click",changeTheme);
+            function hello(){
+                let name = prompt("What is you name?");
+                let mail = prompt("Kindly share your email:");
+                alert("Thank you " + name + ". Welcome to the beading club!")
+            }
+            let join = document.querySelector(".join-us");
+            join.addEventListener("click", hello);
+        </script>
+</body>
+</html>
